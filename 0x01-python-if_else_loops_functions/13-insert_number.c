@@ -1,4 +1,10 @@
 #include "lists.h"
+/**
+ * insert_node - insert a node
+ * @head: the head of the list
+ * @number: compare
+ * Return: the new list
+ */
 
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -6,22 +12,17 @@ listint_t *insert_node(listint_t **head, int number)
 
 	new = malloc(sizeof(listint_t *));
 	if (new == NULL)
-	{
-		return (NULL);
-	}
+	{ return (NULL); }
 	tmp1 = *head;
 	tmp2 = *head;
 
 	new->n = number;
 	new->next = NULL;
-
-
 	if ((*head)->n >= number)
 	{
 		new->next = *head;
 		*head = new;
 	}
-
 	else
 	{
 	tmp1 = tmp1->next;
