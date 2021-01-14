@@ -4,7 +4,9 @@ import sys
 if __name__ == "__main__":
     count = 0
     size = len(sys.argv) - 1
-    if size == 1:
+    if size == 0:
+        print("0 argunmets.")
+    elif size == 1:
         print("{} argunmet:".format(size))
         print("{}: {}".format(1, sys.argv[1]))
     else:
