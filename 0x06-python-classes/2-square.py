@@ -9,11 +9,12 @@ class Square:
     def __init__(self, size=0):
         self.__size = size
         try:
-            if "{:d}".format(size) is False:
-                raise TypeError
+            "{:d}".format(size)
             if size < 0:
-                raise ValueError
+                raise TypeError
         except(TypeError):
             print("size must be >= 0")
+            raise ValueError
         except(ValueError):
             print("size must be an integer")
+            raise TypeError
