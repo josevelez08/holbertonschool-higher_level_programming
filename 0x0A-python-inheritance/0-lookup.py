@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def lookup(obj):
-    return callable.__dir__()
+    return dir(obj)
