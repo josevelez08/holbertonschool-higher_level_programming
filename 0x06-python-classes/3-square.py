@@ -20,6 +20,7 @@ class Square:
             raise TypeError
 
     def area(self):
+        c = 0
         if self.__size:
             c = self.__size * self.__size
         return c
