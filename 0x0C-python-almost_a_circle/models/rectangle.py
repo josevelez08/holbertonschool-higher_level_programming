@@ -23,19 +23,19 @@ class Rectangle (Base):
         self.__x = value
 
     @property
-    """ getter y"""
     def y(self):
+        """ getter y"""
         return self.__y
 
     @y.setter
-    """setter y"""
     def y(self, y):
+        """setter y"""
         self.validateInteger(y, "y")
         self.__y = y
 
     @property
-    """ getter height"""
     def height(self):
+        """ getter height"""
         return self.__height
 
     @height.setter
@@ -138,5 +138,5 @@ class Rectangle (Base):
 
     def __str__(self):
         """format the print"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".
+        return "[Rectangle] ({}) {}/{} - {}/{}". \
         format(self.id, self.x, self.y, self.width, self.height)
