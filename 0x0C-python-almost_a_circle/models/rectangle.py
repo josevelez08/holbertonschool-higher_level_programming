@@ -1,19 +1,10 @@
 #!/usr/bin/python3
-
-
-class Base:
-    """The basic class"""
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        if id is None:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
-        else:
-            self.id = id
+from models.base import Base
+""" Rentangle file """
 
 
 class Rectangle (Base):
+    """" Class Rectangle """
 
     __width = ''
     __height = ''
@@ -105,5 +96,30 @@ class Rectangle (Base):
                 if w == 0:
                     for coordinatesX in range(x):
                         print(" ", end="")
-                print('#', end=" ")
+                print('#', end="")
             print("")
+
+    def update(self, *args, **kwargs):
+        dic = ["id", "height", "width", "x", "y"]
+        if len(args) != 0:
+            for i in range(len(args)):
+                setattr(self, dic[i], args[i])
+        else:
+            for i in range(len(dic)):
+                try:
+                    setattr(self, dic[i], kwargs[dic[i]])
+                except:
+                    continue
+
+    def to_dictionary(self):
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".
+        format(self.id, self.x, self.y, self.width, self.height)

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import json
+
 
 class Base:
     """ The basic class """
@@ -11,3 +13,6 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+        return json.dumps(list_dictionaries)
