@@ -10,6 +10,10 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
+        self.validateInteger(width, "width")
+        self.validateInteger(height, "height")
+        self.validate0(width, "width")
+        self.validate0(height, "height")
 
     @property
     def width(self):
@@ -45,4 +49,4 @@ class Rectangle:
     def validate0(self, value, name):
         """ module to check that width and height if are greater than 0"""
         if value < 0:
-            raise ValueError(name + "must be >= 0")
+            raise ValueError(name + " must be >= 0")
