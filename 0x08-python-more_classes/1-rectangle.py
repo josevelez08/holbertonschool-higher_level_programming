@@ -45,4 +45,4 @@ class Rectangle:
     def validate0(self, value, name):
         """ module to check that width and height if are greater than 0"""
         if value < 0:
-            raise ValueError(name + " must be >= 0")
+            raise ValueError(name + "must be >= 0")
