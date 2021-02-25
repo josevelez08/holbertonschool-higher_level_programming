@@ -44,7 +44,7 @@ class Rectangle:
         try:
             "{:d}".format(value)
         except:
-            raise TypeError(name + " must to be a integer")
+            raise TypeError(name + " must be a integer")
 
     def validate0(self, value, name):
         """ module to check that width and height if are greater than 0"""
