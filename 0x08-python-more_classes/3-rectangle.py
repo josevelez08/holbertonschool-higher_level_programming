@@ -67,10 +67,13 @@ class Rectangle:
 
     def __str__(self):
         """Format to print the shape of the rectangle"""
+        if self.__width == 0 or self.__width == 0:
+            return 0
         square = ""
         character = "#"
-        for x in range(self.__height):
-            for y in range(self.__width):
+        for y in range(self.__height):
+            for x in range(self.__width):
                 square += character
-            square += "\n"
+            if y - 1 != self.__width:
+                square += "\n"
         return square
