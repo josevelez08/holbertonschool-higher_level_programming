@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-al = ""
+alt = ""
 for i in reversed(range(97, 123)):
     if not i % 2:
-        al = chr(i).lower()
+        alt = chr(i).lower()
     else:
-        al = chr(i).upper()
-    print("{}".format(al), end="")
+        alt = chr(i).upper()
+    print("{}".format(alt), end="")
