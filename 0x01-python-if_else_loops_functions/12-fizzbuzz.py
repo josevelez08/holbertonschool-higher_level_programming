@@ -4,8 +4,8 @@ def fizzbuzz():
         if (number % 3 == 0) and (number % 5 == 0):
             print("{}".format("FizzBuzz"), end=" ")
         elif (number % 3 == 0):
-            print("{}".format("Fizz"), end= " ")
+            print("{}".format("Fizz"), end=" ")
         elif (number % 5 == 0):
-            print("{}".format("Buzz"), end= " ")
+            print("{}".format("Buzz"), end=" ")
         else:
-            print("{}".format(number), end= " ")
+            print("{}".format(number), end=" ")
