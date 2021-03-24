@@ -6,15 +6,10 @@ class Square extends Rectangle {
     super(size);
     this.size = size;
   }
-  charPrint(c){
-    if(c){
-      const y = c;
-    }
-    else{
-      const y = 'X';
-    }
+
+  charPrint (c) {
     let i;
-    const result = y.repeat(this.width);
+    const result = c.repeat(this.width);
     for (i = 0; i < this.height; i++) {
       console.log(result);
     }
