@@ -6,6 +6,10 @@ class Rectangle {
       this.width = w;
       this.height = h;
     }
+    else{
+      this.height = w;
+      this.width = w;
+    }
   }
 
   print () {
