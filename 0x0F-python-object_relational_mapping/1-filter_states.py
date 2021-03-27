@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module select where the names start with 'n'
+"""
 
 import MySQLdb
 import sys
