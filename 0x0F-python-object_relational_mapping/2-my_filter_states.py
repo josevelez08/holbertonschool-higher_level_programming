@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module select the name that match with a argument
+"""
 
 import MySQLdb
 import sys
